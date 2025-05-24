@@ -1,0 +1,12 @@
+javascript:(function() {   
+  alert("⏳ Loading finalized notes, please wait...");    
+  fetch("ADD LINK TO YOUR FINALIZE NOTE N8N WORKFLOW", { method: "POST" })     
+    .then(() => {       
+      alert("✅ Summary added to finalized note docx.\n\nClick OK to open the document.");       
+      window.open("https://docs.google.com/YOUR DOCUMENT LINK", "_blank");     
+    })     
+    .catch(err => {       
+      alert("❌ Error: " + err);       
+      console.error(err);     
+    }); 
+})();
