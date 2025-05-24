@@ -1,0 +1,16 @@
+javascript:(function(){   
+  const selectedText = window.getSelection().toString().trim();   
+  if (!selectedText) {     
+    alert("Please select some text first.");     
+    return;   
+  }   
+  fetch("https://YOUR N8N WORKFLOW LINK", {     
+    method: "POST",     
+    headers: {       
+      "Content-Type": "application/json"     
+    },     
+    body: JSON.stringify({ note: selectedText })   
+  })   
+  .then(() => alert("Note sent to your Google Doc!"))   
+  .catch(err => alert("Error: " + err)); 
+})();
